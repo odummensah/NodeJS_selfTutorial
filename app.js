@@ -1,12 +1,5 @@
-// MODULES
-// CommonJS, every file is module (by default)
-// Modules - Encapsulated Code (only share minimum)
+const _ = require('lodash');
 
-const names = require ('./4-names')
-const sayHi = require ('./5-utils')
-
-
-sayHi(names.samuel)
-sayHi(names.peter)
-sayHi('susan')  
-
+const items = [1, [2, [3, [4]]]];
+const newItems = _.flattenDeep(items);
+console.log(newItems);  // Output: [1, 2, 3, 4]
